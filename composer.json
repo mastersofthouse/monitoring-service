@@ -1,0 +1,60 @@
+{
+    "version": "1.0",
+    "name": "soft-house/monitoring-service",
+    "description": "",
+    "keywords": [
+        "soft-house",
+        "monitoring-service"
+    ],
+    "homepage": "https://github.com/soft-house/monitoring-service",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Soft House",
+            "email": "contato@mastersofthouse.com.br",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0|^8.1",
+        "illuminate/support": "^9.0",
+        "livewire/livewire": "*",
+        "hisorange/browser-detect": "^4.5"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoftHouse\\MonitoringService\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoftHouse\\MonitoringService\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoftHouse\\MonitoringService\\MonitoringServiceServiceProvider"
+            ],
+            "aliases": {
+                "MonitoringService": "SoftHouse\\MonitoringService\\MonitoringServiceFacade"
+            }
+        }
+    }
+}
