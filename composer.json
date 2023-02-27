@@ -1,5 +1,5 @@
 {
-    "version": "1.0",
+    "version": "1.1",
     "name": "soft-house/monitoring-service",
     "description": "",
     "keywords": [
@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SoftHouse\\MonitoringService\\": "src"
+            "SoftHouse\\MonitoringService\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -37,7 +37,10 @@
     "autoload-dev": {
         "psr-4": {
             "SoftHouse\\MonitoringService\\Tests\\": "tests"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
